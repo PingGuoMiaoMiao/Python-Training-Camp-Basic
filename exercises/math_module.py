@@ -1,11 +1,4 @@
-"""
-练习: 使用math模块
-
-描述：
-使用math模块计算平方根。
-
-请补全下面的函数，使用math模块的sqrt函数计算平方根。
-"""
+import math
 
 def calculate_square_root(number):
     """
@@ -17,5 +10,7 @@ def calculate_square_root(number):
     返回:
     - 数字的平方根
     """
-    # 请在下方编写代码
-    pass 
+    if number < 0:
+        raise ValueError("输入必须是非负数")
+    return math.sqrt(number)
+

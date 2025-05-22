@@ -1,8 +1,3 @@
-"""
-练习: 正则表达式匹配
-
-在本练习中，你将练习使用Python的正则表达式来处理文本匹配和提取。
-"""
 import re
 
 def find_emails(text):
@@ -15,9 +10,9 @@ def find_emails(text):
     返回:
         list: 文本中找到的所有电子邮件地址的列表
     """
-    # 实现你的代码: 使用正则表达式查找所有邮箱地址
-    # 邮箱格式通常为: username@domain.com
-    pass
+    # 使用正则表达式查找所有邮箱地址
+    email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+    return re.findall(email_pattern, text)
 
 
 def is_valid_phone_number(phone):
@@ -35,8 +30,8 @@ def is_valid_phone_number(phone):
     返回:
         bool: 如果是有效的手机号码则返回True，否则返回False
     """
-    # 实现你的代码: 验证手机号码是否合法
-    pass
+    phone_pattern = r'^1[3-9]\d{9}$'
+    return re.match(phone_pattern, phone) is not None
 
 
 def extract_urls(text):
@@ -49,6 +44,7 @@ def extract_urls(text):
     返回:
         list: 文本中找到的所有URL的列表
     """
-    # 实现你的代码: 使用正则表达式提取所有URL
-    # 需要考虑http://和https://开头的URL
-    pass 
+    # 使用正则表达式提取所有URL
+    url_pattern = r'https?://[a-zA-Z0-9.-]+(?:/[^\s]*)?'
+    return re.findall(url_pattern, text)
+

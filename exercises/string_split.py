@@ -1,12 +1,3 @@
-"""
-练习: 字符串分割
-
-描述：
-使用split()方法分割字符串，提取关键信息。
-
-请补全下面的函数，使用split()方法分割字符串并提取所需信息。
-"""
-
 def extract_keywords(text):
     """
     从文本中提取关键词
@@ -17,9 +8,8 @@ def extract_keywords(text):
     返回:
     - 提取出的关键词列表
     """
-    # 请在下方编写代码
     # 使用split()方法分割字符串，返回关键词列表
-    pass
+    return text.split()
 
 def parse_csv_line(csv_line):
     """
@@ -31,9 +21,8 @@ def parse_csv_line(csv_line):
     返回:
     - 包含各字段的列表
     """
-    # 请在下方编写代码
     # 使用split()方法分割CSV行，返回字段列表
-    pass
+    return csv_line.split(',')
 
 def extract_name_and_domain(email):
     """
@@ -45,6 +34,7 @@ def extract_name_and_domain(email):
     返回:
     - 包含用户名和域名的元组 (username, domain)
     """
-    # 请在下方编写代码
     # 使用split()方法分割电子邮件地址，返回用户名和域名的元组
-    pass 
+    username, domain = email.split('@')
+    return username, domain
+
